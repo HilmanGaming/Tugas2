@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | elite gaming PCs</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins + Orbitron for display -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVBAR (semantic header) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i> NEXUS<span> | PC</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#builder">Build PC</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Unleash Your <span class="neon-text">Ultimate Gaming Power</span></h1>
+                <p>Custom‑built rigs with the fastest components. Dominate any game.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Shop Now</a>
+                    <a href="#builder" class="btn btn-outline"><i class="fas fa-microchip"></i> Build Your PC</a>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <!-- FEATURED PRODUCTS (3 premium PCs) -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2 class="section-title"><span class="neon-underline">Featured</span> Gaming Rigs</h2>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&h=250&fit=crop" alt="Phantom X RGB">
+                        </div>
+                        <div class="product-info">
+                            <h3>Phantom X</h3>
+                            <p class="specs"><i class="fas fa-microchip"></i> i9-13900K · RTX 4090 · 32GB DDR5</p>
+                            <div class="price">$4,299</div>
+                            <a href="#" class="btn-small"><i class="fas fa-bolt"></i> Buy Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&h=250&fit=crop" alt="Neon Apex">
+                        </div>
+                        <div class="product-info">
+                            <h3>Neon Apex</h3>
+                            <p class="specs"><i class="fas fa-microchip"></i> Ryzen 9 7950X · RX 7900 XTX · 64GB RGB</p>
+                            <div class="price">$3,899</div>
+                            <a href="#" class="btn-small"><i class="fas fa-bolt"></i> Buy Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=250&fit=crop" alt="Void Rig">
+                        </div>
+                        <div class="product-info">
+                            <h3>Void Rig</h3>
+                            <p class="specs"><i class="fas fa-microchip"></i> i7-13700K · RTX 4080 · 32GB DDR5</p>
+                            <div class="price">$3,199</div>
+                            <a href="#" class="btn-small"><i class="fas fa-bolt"></i> Buy Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 4 (optional, to show 4) -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?w=400&h=250&fit=crop" alt="Titan Glacier">
+                        </div>
+                        <div class="product-info">
+                            <h3>Titan Glacier</h3>
+                            <p class="specs"><i class="fas fa-microchip"></i> Ryzen 7 7800X3D · RTX 4070 Ti · 32GB</p>
+                            <div class="price">$2,599</div>
+                            <a href="#" class="btn-small"><i class="fas fa-bolt"></i> Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOM PC BUILDER (dynamic price) -->
+        <section id="builder" class="builder-section">
+            <div class="container">
+                <h2 class="section-title"><span class="neon-underline">Custom</span> PC Builder</h2>
+                <div class="builder-panel">
+                    <div class="builder-controls">
+                        <label>CPU <i class="fas fa-microchip"></i>
+                            <select id="cpuSelect">
+                                <option value="600">Intel i9-14900K (+$600)</option>
+                                <option value="450">AMD Ryzen 9 7950X (+$450)</option>
+                                <option value="350" selected>Intel i7-13700K (+$350)</option>
+                            </select>
+                        </label>
+                        <label>GPU <i class="fas fa-tv"></i>
+                            <select id="gpuSelect">
+                                <option value="1600">NVIDIA RTX 4090 (+$1600)</option>
+                                <option value="1200" selected>AMD RX 7900 XTX (+$1200)</option>
+                                <option value="800">NVIDIA RTX 4070 Ti (+$800)</option>
+                            </select>
+                        </label>
+                        <label>RAM <i class="fas fa-memory"></i>
+                            <select id="ramSelect">
+                                <option value="200">32GB DDR5 RGB (+$200)</option>
+                                <option value="350" selected>64GB DDR5 RGB (+$350)</option>
+                                <option value="500">128GB DDR5 (+$500)</option>
+                            </select>
+                        </label>
+                        <div class="price-preview">
+                            <span>Estimated total:</span>
+                            <span id="totalPrice" class="neon-total">$2,900</span>
+                        </div>
+                        <button class="btn-primary builder-cta"><i class="fas fa-cog"></i> Build this PC</button>
+                    </div>
+                    <div class="builder-visual">
+                        <i class="fas fa-server fa-4x"></i>
+                        <p>Select components — price updates instantly</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US (features) -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why <span class="neon-underline">Choose Nexus</span></h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-tachometer-alt fa-3x"></i>
+                        <h3>Peak Performance</h3>
+                        <p>Hand‑picked, overclocked components for max FPS.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                        <h3>3‑Year Warranty</h3>
+                        <p>Full parts & labor coverage — we stand behind our builds.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-paint-brush fa-3x"></i>
+                        <h3>Custom Aesthetics</h3>
+                        <p>Custom liquid cooling, RGB harmony, and cable perfection.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-truck fa-3x"></i>
+                        <h3>Fast & Secure Shipping</h3>
+                        <p>Double‑boxed, fully insured, and delivered in 3‑5 days.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Gamers <span class="neon-underline">Trust Us</span></h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"The Phantom X is an absolute beast. 4K max settings on everything, and the build quality is stunning."</p>
+                        <h4>— Alex Chen</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"I used the custom builder to pick exactly what I wanted. The price updated live — so smooth. My new rig is a dream."</p>
+                        <h4>— Samantha Rivera</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"Super fast delivery and cable management is art. Definitely my go‑to store for upgrades."</p>
+                        <h4>— Marcus "K1NG" Lee</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (contact, social, copyright) -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo"><i class="fas fa-crown"></i> NEXUS<span> | PC</span></div>
+                    <p>High‑end custom gaming PCs built for enthusiasts, by enthusiasts. Based in Austin, TX.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#builder">Build PC</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> sales@nexuspc.gg</p>
+                    <p><i class="fas fa-phone"></i> +1 (800) 555‑7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Neon Blvd, Austin, TX</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Drop a frag</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NEXUS Gaming PCs. All rights reserved. <i class="fas fa-heart neon-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script at the end -->
+    <script src="script.js"></script>
+</body>
+</html>
